@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!--viewport is cater for responsive design-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects from Siyu Yang's online resume.">
+        <meta charset="UTF-8">
+        <!--viewport is cater for responsive design-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Selected projects by Siyu Yang, including web development, interactive design, and the HALO WeChat Mini Program.">
+
+        <!--Google font use-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <!-- external CSS here-->
+        <link rel="stylesheet" type="text/css" href="../css/stylepage.css">
     <title>Projects | CS303MP-1</title>
 </head>
 
@@ -15,65 +23,103 @@
     <p>Selected projects combining web development, interaction, and design.</p>
 </header>
 
-<!--navigation bar-->
-<nav>
-    <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="education.html">Education</a></li>
-        <li><a href="experiences.html">Experiences</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="certification.html">Certification</a></li>
-        <li><a href="projects.html">Project</a></li>
-    </ul>
-</nav>
+<div id="container">
+    <!--navigation bar-->
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="achievements.html">Achievements</a></li>
+            <li><a href="certification.html">Certification</a></li>
+            <li><a href="projects.html">Project</a></li>
+        </ul>
+    </nav>
 
-<!--main content-->
-<main>
-    <h2>My Projects</h2>
+    <!--main content-->
+    <main>
+        <h2>My Projects</h2>
 
-    <!--HALO project-->
-    <section>
-        <h3>HALO - WeChat Mini Program</h3>
+        <!--HALO project-->
+        <section>
+            <h3>HALO - WeChat Mini Program</h3>
 
-        <p>
-            HALO is a food recording and health management WeChat Mini Program.
-            I designed and developed the application to provide a simple way to
-            record meals, track calories and macronutrients, and review weekly
-            calorie trends.
-        </p>
+            <p>
+                HALO is a food recording and health management WeChat Mini Program.
+                I designed and developed the application to provide a simple way to
+                record meals, track calories and macronutrients, and review weekly
+                calorie trends.
+            </p>
 
-        <p>
-            <strong>Technologies:</strong>
-            WXML, WXSS, JavaScript, WeChat Mini Program
-        </p>
-    </section>
+            <p>
+                <strong>Technologies:</strong>
+                WXML, WXSS, JavaScript, WeChat Mini Program
+            </p>
+        </section>
 
-    <!--CS103 project-->
-    <section>
-        <h3>Formula 1 Website - CS103 Final Project</h3>
+        <!--CS103 project-->
+        <section>
+            <h3>Formula 1 Website - CS103 Final Project</h3>
 
-        <p>
-            A multi-page Formula 1 themed website created as my CS103 final
-            project. The website includes pages for drivers, teams, history,
-            and circuits with a responsive layout and interactive web content.
-        </p>
+            <p>
+                A multi-page Formula 1 themed website created as my CS103 final
+                project. The website includes pages for drivers, teams, history,
+                and circuits with a responsive layout and interactive web content.
+            </p>
 
-        <p>
-            <strong>Technologies:</strong>
-            HTML, CSS, JavaScript
-        </p>
-    </section>
+            <p>
+                <strong>Technologies:</strong>
+                HTML, CSS, JavaScript
+            </p>
+        </section>
 
-    <!--JavaScript calculator will be added later-->
-    <section>
-        <h2>JavaScript Calculator</h2>
+        <!--JavaScript calculator will be added later-->
+        <!--JavaScript Calculator-->
+        <section>
 
-        <p>
-            A JavaScript calculator will be added to this section.
-        </p>
-    </section>
-</main>
+            <div class="calculator-wrapper">
+
+                <h2>JavaScript Calculator</h2>
+
+                <!-- input bar section -->
+                <label for="First">Number 1:</label>
+                <input type="text" id="First" placeholder="enter first number">
+
+                <br>
+
+                <label for="Second">Number 2:</label>
+                <input type="text" id="Second" placeholder="enter second number">
+
+                <br>
+
+                <!-- JS calculation section -->
+                <div class="button-group">
+
+                    <button onclick="Plus()">+</button>
+                    <button onclick="Mins()">-</button>
+                    <button onclick="Mut()">*</button>
+                    <button onclick="Div()">/</button>
+                    <button onclick="doPow()">**</button>
+
+                    <button onclick="doClean()" class="clear-button">Clear</button>
+
+                </div>
+
+                <!-- result output -->
+                <div class="div-1">
+                    <p id="Result"></p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+
+
 
 <!--footer/credit pages-->
 <footer>
@@ -84,6 +130,6 @@
 </footer>
 
 <!--deploy JS file here-->
-<script></script>
+<script src="../js/clac.js"> </script>
 </body>
 </html>
